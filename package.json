@@ -1,0 +1,27 @@
+{
+  "name": "spamulator",
+  "version": "1.0.0",
+  "description": "CouchDB changes feed simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glynnbird/spamulator.git"
+  },
+  "keywords": [
+    "CouchDB",
+    "Spam"
+  ],
+  "author": "Glynn Bird <glynn.bird@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/glynnbird/spamulator/issues"
+  },
+  "homepage": "https://github.com/glynnbird/spamulator#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
