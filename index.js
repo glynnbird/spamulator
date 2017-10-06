@@ -16,11 +16,30 @@ const makeObj = function(seq, include_docs) {
       c: true
     }
   }
+  // add
+  switch(seq % 3) {
+    case 0: 
+      // add
+    break;
+    case 1:
+      // update
+      obj.changes[0] = '2-zyx';
+      if (obj.doc) {
+        obj.doc._rev = '2-zyx';
+      }
+      break;
+    case 2:
+      // deletion
+      obj.deleted = true;
+      obj.doc = null;
+      obj.changes[0] = '2-zyx';
+    break;
+  }
   return JSON.stringify(obj) + '\n';
 }
 
 const processSince = function(since) {
-  if (since === 'now') {
+  if (! since || since === 'now') {
     since = 10;
   } else if (since.length > 0) {
     const bits = since.split('-');

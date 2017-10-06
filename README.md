@@ -25,3 +25,11 @@ For a changes feed that hangs after 15 results:
 For a partial changes feed
 
     curl 'http://localhost:3000/db3/_changes?feed=continuous'
+
+## Notes
+
+- only supports `feed=continuous`
+- you may supply `include_docs=true`
+- naive support for `since=0`, `since=now`, `since=15-abc1234`
+
+Every third change is a insert, update or a delete in rotation.
